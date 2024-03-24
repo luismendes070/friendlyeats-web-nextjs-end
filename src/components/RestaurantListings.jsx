@@ -7,7 +7,6 @@ import Link from "next/link";
 import { React, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import renderStars from "@/src/components/Stars.jsx";
-import { getRestaurantsSnapshot } from "@/src/lib/firebase/firestore.js";
 import Filters from "@/src/components/Filters.jsx";
 
 const RestaurantItem = ({ restaurant }) => (
@@ -74,16 +73,6 @@ export default function RestaurantListings({
 
 	useEffect(() => {
 		routerWithFilters(router, filters);
-	}, [filters]);
-
-	useEffect(() => {
-		const unsubscribe = getRestaurantsSnapshot(data => {
-			setRestaurants(data);
-		}, filters);
-
-		return () => {
-			unsubscribe();
-		};
 	}, [filters]);
 
 	return (

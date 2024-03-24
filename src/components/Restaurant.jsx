@@ -5,10 +5,6 @@
 
 import { React, useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import {
-  getRestaurantSnapshotById,
-  getReviewsSnapshotByRestaurantId,
-} from "@/src/lib/firebase/firestore.js";
 import { auth } from "@/src/lib/firebase/firebase.js";
 import {getUser} from '@/src/lib/getUser'
 import { updateRestaurantImage } from "@/src/lib/firebase/storage.js";
@@ -52,17 +48,8 @@ export default function Restaurant({
     setReview({ rating: 0, text: "" });
   };
 
-  useEffect(() => {
-    const unsubscribeFromRestaurant = getRestaurantSnapshotById(id, (data) => {
-      setRestaurant(data);
-    });
 
-    const unsubscribeFromReviewsSnapshot = getReviewsSnapshotByRestaurantId(
-      id,
-      (data) => {
-        setReviews(data);
-      }
-    );
+
 
     return () => {
       unsubscribeFromRestaurant();

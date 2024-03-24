@@ -1,5 +1,4 @@
 import RestaurantListings from "@/src/components/RestaurantListings.jsx";
-import { getRestaurants } from "@/src/lib/firebase/firestore.js";
 
 // Force next.js to treat this route as server-side rendered
 // Without this line, during the build process, next.js will treat this route as static and build a static HTML file for it
@@ -15,10 +14,6 @@ export default async function Home({ searchParams }) {
 	const restaurants = await getRestaurants(searchParams);
 	return (
 		<main className="main__home">
-			<RestaurantListings
-				initialRestaurants={restaurants}
-				searchParams={searchParams}
-			/>
 		</main>
 	);
 }
