@@ -10,11 +10,9 @@ import renderStars from "@/src/components/Stars.jsx";
 import Filters from "@/src/components/Filters.jsx";
 
 const RestaurantItem = ({ restaurant }) => (
-	<li key={restaurant.id}>
-		<Link href={`/restaurant/${restaurant.id}`}>
-			<ActiveResturant restaurant={restaurant} />
-		</Link>
-	</li>
+<div>
+	
+</div>
 );
 
 const ActiveResturant = ({ restaurant }) => (
