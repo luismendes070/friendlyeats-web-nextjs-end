@@ -1,6 +1,5 @@
 "use server";
 
-import { addReviewToRestaurant } from "@/src/lib/firebase/firestore.js";
 import { getAuthenticatedAppForUser } from "@/src/lib/firebase/firebase";
 
 // This is a next.js server action, an alpha feature, so
