@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,6 +25,7 @@
     "@babel/core": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
     "@babel/preset-typescript": "^7.24.1",
+    "@testing-library/react": "^14.2.2",
     "@types/node": "^20.11.30",
     "babel-jest": "^29.7.0",
     "encoding": "^0.1.13",
