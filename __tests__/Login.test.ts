@@ -6,6 +6,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import firebase from 'firebase';
 import { Header as login } from '../src/components/Header';
+import { Header } from 'next/dist/lib/load-custom-routes';
 
 jest.mock('firebase', () => ({
   auth: jest.fn(() => ({
@@ -26,7 +27,7 @@ describe('Login Component', () => {
       },
     });
 
-    render(<YourLoginComponent />);
+    render(<Header />);
 
     userEvent.type(screen.getByLabelText(/email/i), email);
     userEvent.type(screen.getByLabelText(/password/i), password);
