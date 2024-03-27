@@ -1,7 +1,6 @@
 export default {
-	projectId: "demo-codelab-nextjs",
-	appId: "demo-codelab-nextjs",
-	apiKey: "demo-codelab-nextjs",
-	storageBucket: "demo-codelab-nextjs.appspot.com",
-	authDomain: "demo-codelab-nextjs.firebaseapp.com",
+	projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+	appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+	apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+	authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
 };

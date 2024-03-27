@@ -6,7 +6,7 @@ import {
 	signOut,
 	onAuthStateChanged
 } from "@/src/lib/firebase/auth.js";
-import { addFakeRestaurantsAndReviews } from "@/src/lib/firebase/firestore.js";
+
 import { useRouter } from "next/navigation";
 
 function useUserSession(initialUser) {
@@ -70,15 +70,6 @@ export default function Header({initialUser}) {
 							...
 							<ul>
 								<li>{user.displayName}</li>
-
-								<li>
-									<a
-										href="#"
-										onClick={addFakeRestaurantsAndReviews}
-									>
-										Add sample restaurants
-									</a>
-								</li>
 
 								<li>
 									<a href="#" onClick={handleSignOut}>
