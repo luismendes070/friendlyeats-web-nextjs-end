@@ -4,7 +4,11 @@
 // It receives data from src/app/page.jsx, such as the initial restaurants and search params from the URL
 
 import Link from "next/link";
-import { React, useState, useEffect } from "react";
+
+import React from "react";
+import useState from "react";
+import useEffect from "react";
+
 import { useRouter } from "next/navigation";
 import renderStars from "@/src/components/Stars.jsx";
 import Filters from "@/src/components/Filters.jsx";

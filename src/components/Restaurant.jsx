@@ -3,7 +3,9 @@
 // This components shows one individual restaurant
 // It receives data from src/app/restaurant/[id]/page.jsx
 
-import { React, useState, useEffect } from "react";
+import React from "react";
+import useState from "react";
+import useEffect from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/src/lib/firebase/firebase.js";
 import {getUser} from '@/src/lib/getUser'
