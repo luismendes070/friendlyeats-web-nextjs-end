@@ -17,8 +17,8 @@ jest.mock('firebase', () => ({
 
 describe('Login Component', () => {
   test('Login success', async () => {
-    const email = 'test@example.com';
-    const password = 'password123';
+    const email = process.env.EMAIL;
+    const password = process.env.PASSWORD;
 
     // Mocking Firebase signInWithEmailAndPassword function
     (firebase.auth as jest.Mocked<any>).signInWithEmailAndPassword.mockResolvedValueOnce({
