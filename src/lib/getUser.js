@@ -4,9 +4,6 @@ import { useEffect, useState } from 'react'
 import { auth } from '@/src/lib/firebase/firebase'
 import { useRouter } from 'next/navigation'
 
-import { useEffect, useState } from 'react';
-import { auth } from '@/src/lib/firebase/firebase';
-import { useRouter } from 'next/navigation';
 
 export function getUser() {
     const [user, setUser] = useState();
