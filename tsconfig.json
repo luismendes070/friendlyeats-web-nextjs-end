@@ -117,7 +117,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/components/MyComponent.jsx"  ],
   "exclude": [
     "node_modules"
   ]
